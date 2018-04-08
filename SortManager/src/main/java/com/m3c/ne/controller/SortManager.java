@@ -6,19 +6,19 @@ import java.util.Random;
 
 public class SortManager {
     public void sortArray(int size){
-        DisplayManager disMan  = new DisplayManager();
+        DisplayManager displayManager  = new DisplayManager();
         try {
             SortInterface sorter = SortFactory.getInstance();
             int[] arrayToSort = createArray(size);
 
-            disMan.displayUnsortedArray(sorter, arrayToSort);
+            displayManager.displayUnsortedArray(sorter, arrayToSort);
             long start = System.nanoTime();
             int[] sortedArray = sorter.sort(arrayToSort);
             long end = System.nanoTime();
 
-            disMan.displaySorted(sortedArray, end - start);
+            displayManager.displaySorted(sortedArray, end - start);
         }catch(SortManagerException sme){
-            disMan.sortErrorMessage(sme.getMessage());
+            displayManager.sortErrorMessage(sme.getMessage());
         }
     }
     private int[] createArray(int size){

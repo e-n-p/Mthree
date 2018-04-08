@@ -17,9 +17,9 @@ public class BinaryTreeImp implements BinaryTree {
     }
 
     public BinaryTreeImp(int[] values) {
-        this.root = new Node(values[0]);
-        if (values.length > 1){
-            for (int i=1;i<values.length;i++) {
+        if (values.length >= 1) {
+            this.root = new Node(values[0]);
+            for (int i = 1; i < values.length; i++) {
                 addElement(values[i]);
             }
         }
@@ -34,7 +34,7 @@ public class BinaryTreeImp implements BinaryTree {
     }
 
     public void addElement(int element) {
-            insertElement(root, element);
+        insertElement(root, element);
     }
 
     private void insertElement(Node node, int element) {
@@ -77,26 +77,35 @@ public class BinaryTreeImp implements BinaryTree {
     }
 
     public int getLeftChild(int element) throws ElementNotFoundException {
-        Node leftParent = getChild(root,element);
-        if (leftParent.getLeft() == null){
-            disMan.binaryTreeNoChild("right");
-            return 0;
-        }else {
-            return leftParent.getRight().getValue();
+        try {
+            Node leftParent = getElementVal(root, element);
+            if (leftParent.getLeft() == null) {
+                disMan.binaryTreeNoChild("left");
+                return 0;
+            } else {
+                return leftParent.getLeft().getValue();
+            }
+        } catch (NullPointerException E) {
+            throw new ElementNotFoundException("No left child of element " + element);
         }
+
     }
 
     public int getRightChild(int element) throws ElementNotFoundException {
-        Node rightParent = getChild(root,element);
-        if (rightParent.getRight() == null){
-             disMan.binaryTreeNoChild("right");
-             return 0;
-        }else {
-            return rightParent.getRight().getValue();
+        try {
+            Node rightParent = getElementVal(root, element);
+            if (rightParent.getRight() == null) {
+                disMan.binaryTreeNoChild("right");
+                return 0;
+            } else {
+                return rightParent.getRight().getValue();
+            }
+        } catch (NullPointerException E) {
+            throw new ElementNotFoundException("No right child of element" + element);
         }
     }
 
-    private Node getChild(Node node, int element){
+    private Node getElementVal(Node node, int element) {
         while (node != null) {
             if (element == node.getValue()) {
                 return node;
@@ -119,8 +128,8 @@ public class BinaryTreeImp implements BinaryTree {
         return descOrder(root);
     }
 
-    private ArrayList<Integer> descOrder(Node node){
-        if (node!= null) {
+    private ArrayList<Integer> descOrder(Node node) {
+        if (node != null) {
             descOrder(node.getRight());
             list.add(node.getValue());
             descOrder(node.getLeft());
@@ -128,8 +137,8 @@ public class BinaryTreeImp implements BinaryTree {
         return list;
     }
 
-    private ArrayList<Integer> ascOrder(Node node){
-        if (node!= null) {
+    private ArrayList<Integer> ascOrder(Node node) {
+        if (node != null) {
             ascOrder(node.getLeft());
             list.add(node.getValue());
             ascOrder(node.getRight());

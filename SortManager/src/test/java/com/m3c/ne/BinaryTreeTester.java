@@ -30,12 +30,6 @@ public class BinaryTreeTester {
         Assert.assertArrayEquals(singleArray,sortedArray);
     }
     @Test
-    public void duplicatesInArray(){
-        int[] arrayWDuplicates={4,4,4,10,4,8,8};
-        int[] sortedArray=sorter.sort(arrayWDuplicates);
-        Assert.assertArrayEquals(new int[]{4,4,4,4,8,8,10},sortedArray);
-    }
-    @Test
     public void reverseSortedArray(){
         int[] reversedArray={9,8,7,6,5,4,3,2,1};
         int[] sortedArray=sorter.sort(reversedArray);
@@ -43,9 +37,9 @@ public class BinaryTreeTester {
     }
     @Test
     public void testNegatives(){
-        int[] negativeArray = {-5,-8,-41,-5,0,7};
+        int[] negativeArray = {-5,-8,-41,0,7};
         int[] sortedArray = sorter.sort(negativeArray);
-        Assert.assertArrayEquals(new int[]{-41,-8,-5,-5,0,7}, sortedArray);
+        Assert.assertArrayEquals(new int[]{-41,-8,-5,0,7}, sortedArray);
     }
     @Test
     public void testPresorted(){
@@ -53,13 +47,36 @@ public class BinaryTreeTester {
         int[] sortedArray = sorter.sort(PresortedArray);
         Assert.assertArrayEquals(PresortedArray,sortedArray);
     }
-    @Test
-    public void exceptionNoChild() throws ElementNotFoundException {
+    @Test(expected = ElementNotFoundException.class)
+    public void exceptionNoLeftChild() throws ElementNotFoundException {
         try{
             testTree.getLeftChild(8);
         }catch(ElementNotFoundException E){
             throw new ElementNotFoundException("No child of this element");
         }
     }
-
+    @Test(expected = ElementNotFoundException.class)
+    public void exceptionNoRightChild() throws ElementNotFoundException {
+        try{
+            testTree.getRightChild(10);
+        }catch(ElementNotFoundException E){
+            throw new ElementNotFoundException("No child of this element");
+        }
+    }
+    @Test
+    public void getLeftChild() {
+        try{
+            Assert.assertEquals(testTree.getLeftChild(2),1);
+        }catch(ElementNotFoundException E){
+            E.printStackTrace();
+        }
+    }
+    @Test
+    public void getRightChild(){
+        try{
+            Assert.assertEquals(testTree.getRightChild(2), 9);
+        }catch(ElementNotFoundException E){
+            E.printStackTrace();
+        }
+    }
 }
