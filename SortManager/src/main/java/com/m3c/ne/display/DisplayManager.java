@@ -18,11 +18,12 @@ public class DisplayManager {
 
     public String print(int[] arr){
         String res ="";
-        for (int element : arr) {
-            res += element+",";
+        if(arr.length > 0){
+            for (int element : arr) {
+                res += element+",";
+            }
+            res = res.substring(0,res.length()-1);
         }
-        res = res.substring(0,res.length()-1);
-        res = "|"+res+"|";
         return res;
     }
 

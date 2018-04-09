@@ -5,6 +5,7 @@ import com.m3c.ne.sorters.*;
 import java.util.Random;
 
 public class SortManager {
+
     public void sortArray(int size){
         DisplayManager displayManager  = new DisplayManager();
         try {
@@ -21,6 +22,7 @@ public class SortManager {
             displayManager.sortErrorMessage(sme.getMessage());
         }
     }
+
     private int[] createArray(int size){
         Random random = new Random();
         int[] unsortedArray = new int[size];

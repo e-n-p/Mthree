@@ -8,6 +8,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class BinaryTreeTester {
     public SortInterface sorter;
 
@@ -15,13 +18,22 @@ public class BinaryTreeTester {
     public void setup(){
         sorter = new BinaryTreeSorter();
     }
-    BinaryTreeImp testTree = new BinaryTreeImp(new int[]{2,9,6,7,1});
+    BinaryTreeImp testTree = new BinaryTreeImp(new int[]{1,2,4,5,4,5,5});
 
     @Test
     public void testEmptyArray(){
         int[] emptyArray = new int[0];
         int[] sortedArray = sorter.sort(emptyArray);
         Assert.assertEquals(0,sortedArray.length);
+    }
+    @Test
+    public void testDuplicates(){
+        int[] duplicatesArr={1,2,4,5,4,5,5};
+        String originalOrder = testTree.getNonSortedTree();
+        int[] sortedArr= sorter.sort(duplicatesArr);
+        System.out.println("order entered to the tree: "+originalOrder);
+        System.out.println("sorted order return: "+Arrays.toString(sortedArr));
+        Assert.assertArrayEquals(new int[]{1,2,4,4,5,5,5},sortedArr);
     }
     @Test
     public void singleElementArray(){
@@ -79,4 +91,10 @@ public class BinaryTreeTester {
             E.printStackTrace();
         }
     }
+    @Test
+    public void testToString(){
+        Assert.assertEquals("BinaryTree Sorter",sorter.toString());
+
+    }
+
 }

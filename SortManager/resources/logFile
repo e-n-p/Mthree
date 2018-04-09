@@ -1,0 +1,11 @@
+09-04-2018 16:20:43 INFO [main] Starter - Testing logging
+09-04-2018 16:22:30 TRACE [main] Starter - com.m3c.ne.controller.SortManager@4e50df2e
+09-04-2018 16:22:51 TRACE [main] Starter - com.m3c.ne.controller.SortManager@6f496d9f
+09-04-2018 16:23:47 TRACE [main] Starter - com.m3c.ne.controller.SortManager@6f496d9f
+09-04-2018 16:23:52 TRACE [main] Starter - com.m3c.ne.controller.SortManager@6f496d9f
+09-04-2018 16:25:31 TRACE [main] Starter - com.m3c.ne.controller.SortManager@6f496d9f
+09-04-2018 16:25:56 TRACE [main] Starter - com.m3c.ne.controller.SortManager@6f496d9f
+09-04-2018 16:39:27 TRACE [main] Starter - com.m3c.ne.controller.SortManager@6f496d9f
+09-04-2018 16:46:52 TRACE [main] Starter - com.m3c.ne.controller.SortManager@6f496d9f
+09-04-2018 16:46:55 TRACE [main] Starter - com.m3c.ne.controller.SortManager@6f496d9f
+09-04-2018 17:35:35 TRACE [main] Starter - com.m3c.ne.controller.SortManager@6f496d9f

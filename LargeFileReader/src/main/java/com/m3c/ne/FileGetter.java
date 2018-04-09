@@ -12,6 +12,7 @@ class FileGetter {
     FileGetter(String path){
         this.path = path;
     }
+
     //method to open file handling file not found exceptions
     BufferedReader openFile(){
         try {

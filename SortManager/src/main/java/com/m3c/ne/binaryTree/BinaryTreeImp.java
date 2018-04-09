@@ -3,14 +3,16 @@ package com.m3c.ne.binaryTree;
 import com.m3c.ne.display.DisplayManager;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class BinaryTreeImp implements BinaryTree {
 
     private int nodeCount = 0;
     private ArrayList<Integer> list = new ArrayList<>();
     private Node root;
-    private DisplayManager disMan = new DisplayManager();
+    private DisplayManager displayManager = new DisplayManager();
 
     public BinaryTreeImp(int value) {
         this.root = new Node(value);
@@ -19,6 +21,7 @@ public class BinaryTreeImp implements BinaryTree {
     public BinaryTreeImp(int[] values) {
         if (values.length >= 1) {
             this.root = new Node(values[0]);
+            nodeCount++;
             for (int i = 1; i < values.length; i++) {
                 addElement(values[i]);
             }
@@ -79,8 +82,8 @@ public class BinaryTreeImp implements BinaryTree {
     public int getLeftChild(int element) throws ElementNotFoundException {
         try {
             Node leftParent = getElementVal(root, element);
-            if (leftParent.getLeft() == null) {
-                disMan.binaryTreeNoChild("left");
+            if (leftParent == null) {
+                displayManager.binaryTreeNoChild("left");
                 return 0;
             } else {
                 return leftParent.getLeft().getValue();
@@ -88,14 +91,13 @@ public class BinaryTreeImp implements BinaryTree {
         } catch (NullPointerException E) {
             throw new ElementNotFoundException("No left child of element " + element);
         }
-
     }
 
     public int getRightChild(int element) throws ElementNotFoundException {
         try {
             Node rightParent = getElementVal(root, element);
-            if (rightParent.getRight() == null) {
-                disMan.binaryTreeNoChild("right");
+            if (rightParent == null) {
+                displayManager.binaryTreeNoChild("right");
                 return 0;
             } else {
                 return rightParent.getRight().getValue();
@@ -144,5 +146,22 @@ public class BinaryTreeImp implements BinaryTree {
             ascOrder(node.getRight());
         }
         return list;
+    }
+
+    public String getNonSortedTree(){
+        Queue<Node> level = new LinkedList<>();
+        level.add(root);
+        String res = "";
+        while(!level.isEmpty()){
+            Node node = level.poll();
+            res += node.getValue()+",";
+            if(node.getLeft() != null){
+                level.add(node.getLeft());
+            }
+            if(node.getRight() != null){
+                level.add(node.getRight());
+            }
+        }
+        return res;
     }
 }

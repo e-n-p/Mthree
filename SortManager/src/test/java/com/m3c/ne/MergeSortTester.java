@@ -1,20 +1,18 @@
 package com.m3c.ne;
 
-import com.m3c.ne.sorters.BinaryTreeSorter;
-import com.m3c.ne.sorters.BubbleSorter;
+import com.m3c.ne.sorters.MergeSorter;
 import com.m3c.ne.sorters.SortInterface;
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class SortTester {
+public class MergeSortTester {
 
     public SortInterface sorter;
 
     @Before
     public void setup(){
-        sorter = new BinaryTreeSorter();
+        sorter = new MergeSorter();
     }
 
     @Test
@@ -53,13 +51,4 @@ public class SortTester {
         int[] sortedArray = sorter.sort(PresortedArray);
         Assert.assertArrayEquals(PresortedArray,sortedArray);
     }
-
-
-
-
-    @After
-    public void tearDown(){
-
-    }
-
 }
