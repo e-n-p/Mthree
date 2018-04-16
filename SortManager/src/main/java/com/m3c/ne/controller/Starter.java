@@ -12,7 +12,7 @@ public class Starter{
         //
         PropertyConfigurator.configure("resources/log4j.properties");
         SortManager sortManager = new SortManager();
-        sortManager.sortArray(10);
+        sortManager.sortArray(5);
         logger.trace(sortManager.toString());
     }
 }

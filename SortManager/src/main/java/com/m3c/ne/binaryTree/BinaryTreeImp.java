@@ -41,12 +41,12 @@ public class BinaryTreeImp implements BinaryTree {
     }
 
     private void insertElement(Node node, int element) {
-        if (element > node.getValue() && node.hasRight(node)) {
+        if (element >= node.getValue() && node.hasRight(node)) {
             insertElement(node.getRight(), element);
         } else if (element > node.getValue()) {
             node.setRight(element);
             nodeCount++;
-        } else if (element < node.getValue() && node.hasLeft(node)) {
+        } else if (element <= node.getValue() && node.hasLeft(node)) {
             insertElement(node.getLeft(), element);
         } else {
             node.setLeft(element);

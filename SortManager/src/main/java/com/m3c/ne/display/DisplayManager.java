@@ -34,4 +34,7 @@ public class DisplayManager {
     public void binaryTreeNoChild(String direction){
         System.out.println("There doesn't exist a "+ direction +" child of this element");
     }
+    public void validIntegerMessage(){
+        System.out.println("Please enter a valid integer");
+    }
 }

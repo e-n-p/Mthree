@@ -8,18 +8,22 @@ public class SortManager {
 
     public void sortArray(int size){
         DisplayManager displayManager  = new DisplayManager();
-        try {
-            SortInterface sorter = SortFactory.getInstance();
-            int[] arrayToSort = createArray(size);
+        if(size < 0){
+            displayManager.validIntegerMessage();
+        }else {
+            try {
+                SortInterface sorter = SortFactory.getInstance();
+                int[] arrayToSort = createArray(size);
 
-            displayManager.displayUnsortedArray(sorter, arrayToSort);
-            long start = System.nanoTime();
-            int[] sortedArray = sorter.sort(arrayToSort);
-            long end = System.nanoTime();
+                displayManager.displayUnsortedArray(sorter, arrayToSort);
+                long start = System.nanoTime();
+                int[] sortedArray = sorter.sort(arrayToSort);
+                long end = System.nanoTime();
 
-            displayManager.displaySorted(sortedArray, end - start);
-        }catch(SortManagerException sme){
-            displayManager.sortErrorMessage(sme.getMessage());
+                displayManager.displaySorted(sortedArray, end - start);
+            }catch(SortManagerException sme){
+                displayManager.sortErrorMessage(sme.getMessage());
+            }
         }
     }
 

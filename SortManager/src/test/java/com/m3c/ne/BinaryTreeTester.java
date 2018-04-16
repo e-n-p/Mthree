@@ -18,7 +18,7 @@ public class BinaryTreeTester {
     public void setup(){
         sorter = new BinaryTreeSorter();
     }
-    BinaryTreeImp testTree = new BinaryTreeImp(new int[]{1,2,4,5,4,5,5});
+    BinaryTreeImp testTree = new BinaryTreeImp(new int[]{5,5,4,5,4,1,2});
 
     @Test
     public void testEmptyArray(){
@@ -28,7 +28,7 @@ public class BinaryTreeTester {
     }
     @Test
     public void testDuplicates(){
-        int[] duplicatesArr={1,2,4,5,4,5,5};
+        int[] duplicatesArr={5,5,4,5,4,1,2};
         String originalOrder = testTree.getNonSortedTree();
         int[] sortedArr= sorter.sort(duplicatesArr);
         System.out.println("order entered to the tree: "+originalOrder);
