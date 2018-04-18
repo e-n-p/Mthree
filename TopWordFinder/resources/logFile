@@ -1,0 +1,29 @@
+18-04-2018 14:04:02 INFO [main] FileGetter - The given pathresources/noSuchFile.txt
+18-04-2018 14:04:02 DEBUG [main] FileGetter - File not found
+18-04-2018 14:05:56 INFO [main] FileGetter - The given path
+18-04-2018 14:05:56 INFO [main] FileGetter - The given pathresources/noSuchFile.txt
+18-04-2018 14:05:56 DEBUG [main] FileGetter - File not found
+18-04-2018 14:06:15 INFO [main] FileGetter - The given path
+18-04-2018 14:06:29 INFO [main] FileGetter - The given pathresources/noSuchFile.txt
+18-04-2018 15:06:31 INFO [main] FileGetter - The given pathresources/books.txt
+18-04-2018 15:18:20 INFO [main] FileGetter - The given pathresources/test.txt
+18-04-2018 15:19:01 INFO [main] FileGetter - The given pathresources/test.txt
+18-04-2018 15:19:35 INFO [main] FileGetter - The given pathresources/test.txt
+18-04-2018 15:20:18 INFO [main] FileGetter - The given pathresources/test.txt
+18-04-2018 15:20:31 INFO [main] FileGetter - The given pathresources/noSuchFile.txt
+18-04-2018 15:20:31 DEBUG [main] FileGetter - File not found
+18-04-2018 15:20:58 INFO [main] FileGetter - The given pathresources/noSuchFile.txt
+18-04-2018 15:20:58 DEBUG [main] FileGetter - File not found
+18-04-2018 15:20:58 INFO [main] FileGetter - The given pathresources/test.txt
+18-04-2018 15:21:03 INFO [main] FileGetter - The given pathresources/noSuchFile.txt
+18-04-2018 15:21:03 DEBUG [main] FileGetter - File not found
+18-04-2018 15:21:03 INFO [main] FileGetter - The given pathresources/test.txt
+18-04-2018 16:12:59 INFO [main] FileGetter - The given pathresources/noSuchFile.txt
+18-04-2018 16:12:59 DEBUG [main] FileGetter - File not found
+18-04-2018 16:12:59 INFO [main] FileGetter - The given pathresources/test.txt
+18-04-2018 16:13:01 INFO [main] FileGetter - The given pathresources/test.txt
+18-04-2018 16:13:02 INFO [main] Starter - run started, 1524064382000, run ended 1524064382053
+18-04-2018 16:13:46 INFO [main] FileGetter - The given pathresources/test.txt
+18-04-2018 16:13:46 INFO [main] Starter - run started, 1524064426679, run ended 1524064426741
+18-04-2018 16:13:56 INFO [main] FileGetter - The given pathresources/test.txt
+18-04-2018 16:13:56 INFO [main] Starter - run started, 1524064436275, run ended 1524064436325
