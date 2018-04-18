@@ -9,3 +9,28 @@
 09-04-2018 16:46:52 TRACE [main] Starter - com.m3c.ne.controller.SortManager@6f496d9f
 09-04-2018 16:46:55 TRACE [main] Starter - com.m3c.ne.controller.SortManager@6f496d9f
 09-04-2018 17:35:35 TRACE [main] Starter - com.m3c.ne.controller.SortManager@6f496d9f
+18-04-2018 11:48:49 TRACE [main] SortFactory - The chose sorter for this run was: tree
+18-04-2018 11:50:49 TRACE [main] SortFactory - The chose sorter for this run was: tree
+18-04-2018 11:56:34 TRACE [main] SortFactory - The chose sorter for this run was: tree
+18-04-2018 11:56:34 INFO [main] DisplayManager - Sorting took 3,874,256
+18-04-2018 11:56:34 INFO [main] DisplayManager - The array sorted was8,10,11,35,45
+18-04-2018 11:56:34 TRACE [main] Starter - com.m3c.ne.controller.SortManager@1a6c5a9e
+18-04-2018 12:10:19 TRACE [main] SortFactory - The chose sorter for this run was: tree
+18-04-2018 12:10:19 INFO [main] SortManager - Generated Array: [I@1a6c5a9e
+18-04-2018 12:10:19 INFO [main] DisplayManager - Sorting took 2,972,246
+18-04-2018 12:10:19 INFO [main] DisplayManager - The array sorted was 2,4,23,25,46
+18-04-2018 12:10:19 TRACE [main] Starter - com.m3c.ne.controller.SortManager@254989ff
+18-04-2018 12:12:26 TRACE [main] SortFactory - The chose sorter for this run was: tree
+18-04-2018 12:12:26 INFO [main] SortManager - Generated Array: [28, 43, 18, 36, 35]
+18-04-2018 12:12:26 INFO [main] DisplayManager - Sorting took 2,997,786
+18-04-2018 12:12:26 INFO [main] DisplayManager - The array sorted was 18,28,35,36,43
+18-04-2018 12:12:26 TRACE [main] Starter - com.m3c.ne.controller.SortManager@179d3b25
+18-04-2018 12:12:55 TRACE [main] SortFactory - The chose sorter for this run was: tree
+18-04-2018 12:12:55 INFO [main] SortManager - Generated Array: [25, 28, 15, 38, 47]
+18-04-2018 12:12:55 INFO [main] DisplayManager - Sorting took 2,844,547
+18-04-2018 12:12:55 INFO [main] DisplayManager - The array sorted was 15,25,28,38,47
+18-04-2018 12:13:41 TRACE [main] SortFactory - The chose sorter for this run was: tree
+18-04-2018 12:19:22 TRACE [main] SortFactory - The chose sorter for this run was: tree
+18-04-2018 12:21:12 TRACE [main] SortFactory - The chose sorter for this run was: tree
+18-04-2018 12:21:51 TRACE [main] SortFactory - The chose sorter for this run was: tree
+18-04-2018 12:22:24 TRACE [main] SortFactory - The chose sorter for this run was: tree

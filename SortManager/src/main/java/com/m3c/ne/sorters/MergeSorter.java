@@ -1,13 +1,23 @@
 package com.m3c.ne.sorters;
 
+/*
+###########################
+##name of program: SortManager
+##class: BinaryTreeImp
+##author: Nick Ellam
+##date:17/04/18
+##description: Sorts given int arrays using the mergeSorter algorithm
+##########################
+*/
+
 public class MergeSorter implements SortInterface {
 
     public int[] sort(int[] arr){
         mergeSort(arr);
         return arr;
     }
-
-    public void mergeSort(int[] arr){
+    //recursively divides the arr until each element is separated
+    private void mergeSort(int[] arr){
         int size = arr.length;
         int mid = size/2;
         if(size<2){
@@ -25,7 +35,8 @@ public class MergeSorter implements SortInterface {
         mergeSort(right);
         merge(left, right, arr);
     }
-    public void merge(int[] left, int[] right, int[] arr){
+    //rejoins the elements in the correct order
+    private void merge(int[] left, int[] right, int[] arr){
         int leftsize = left.length;
         int rightsize = right.length;
         int i=0, j=0, k=0;

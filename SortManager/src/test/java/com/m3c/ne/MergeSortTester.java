@@ -51,4 +51,8 @@ public class MergeSortTester {
         int[] sortedArray = sorter.sort(PresortedArray);
         Assert.assertArrayEquals(PresortedArray,sortedArray);
     }
+    @Test
+    public void testToString(){
+        Assert.assertEquals("Merge Sorter",sorter.toString());
+    }
 }

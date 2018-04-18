@@ -51,4 +51,8 @@ public class BubbleSortTester {
         int[] sortedArray = sorter.sort(PresortedArray);
         Assert.assertArrayEquals(PresortedArray,sortedArray);
     }
+    @Test
+    public void testToString(){
+        Assert.assertEquals("Bubble Sorter",sorter.toString());
+    }
 }

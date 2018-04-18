@@ -1,12 +1,22 @@
 package com.m3c.ne.sorters;
 
+/*
+###########################
+##name of program: SortManager
+##class: BinaryTreeImp
+##author: Nick Ellam
+##date:17/04/18
+##description: uses the bubblesort algorith to sort a given int array
+##########################
+*/
+
 public class BubbleSorter implements SortInterface {
 
     public int[] sort(int[] arr){
         bubbleSort(arr);
         return arr;
     }
-    public void bubbleSort(int[] arr){
+    private void bubbleSort(int[] arr){
         int hold;
         Boolean swapped =true;
         while(swapped) {

@@ -2,6 +2,7 @@ package com.m3c.ne;
 
 import com.m3c.ne.binaryTree.BinaryTreeImp;
 import com.m3c.ne.binaryTree.ElementNotFoundException;
+import com.m3c.ne.display.DisplayManager;
 import com.m3c.ne.sorters.BinaryTreeSorter;
 import com.m3c.ne.sorters.SortInterface;
 import org.junit.Assert;
@@ -13,6 +14,7 @@ import java.util.Arrays;
 
 public class BinaryTreeTester {
     public SortInterface sorter;
+    DisplayManager displayManager = new DisplayManager();
 
     @Before
     public void setup(){
@@ -29,9 +31,9 @@ public class BinaryTreeTester {
     @Test
     public void testDuplicates(){
         int[] duplicatesArr={5,5,4,5,4,1,2};
-        String originalOrder = testTree.getNonSortedTree();
+        int[] originalOrder = testTree.getNonSortedTree();
         int[] sortedArr= sorter.sort(duplicatesArr);
-        System.out.println("order entered to the tree: "+originalOrder);
+        System.out.println("order entered to the tree: "+Arrays.toString(originalOrder));
         System.out.println("sorted order return: "+Arrays.toString(sortedArr));
         Assert.assertArrayEquals(new int[]{1,2,4,4,5,5,5},sortedArr);
     }
@@ -59,7 +61,7 @@ public class BinaryTreeTester {
         int[] sortedArray = sorter.sort(PresortedArray);
         Assert.assertArrayEquals(PresortedArray,sortedArray);
     }
-    @Test(expected = ElementNotFoundException.class)
+    @Test(expected = com.m3c.ne.binaryTree.ElementNotFoundException.class)
     public void exceptionNoLeftChild() throws ElementNotFoundException {
         try{
             testTree.getLeftChild(8);
@@ -94,7 +96,13 @@ public class BinaryTreeTester {
     @Test
     public void testToString(){
         Assert.assertEquals("BinaryTree Sorter",sorter.toString());
-
     }
-
+    @Test
+    public  void testNonSortedOrder(){
+        int[] givenArray = {1,5,3,7,5,8};
+        BinaryTreeImp testTree = new BinaryTreeImp(givenArray);
+        String nonSortedArray = displayManager.print(testTree.getNonSortedTree());
+        String sGivenArray = displayManager.print(givenArray);
+        Assert.assertEquals(sGivenArray,nonSortedArray);
+    }
 }
